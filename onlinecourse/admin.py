@@ -25,8 +25,8 @@ class CourseAdmin(admin.ModelAdmin):
     search_fields = ['name', 'description']
 
 class QuestionAdmin(admin.ModelAdmin):
+    list_display = ('question_text', 'course', 'grade_point')
     inlines = [ChoiceInline]
-    list_display = ['content']
 
 class LessonAdmin(admin.ModelAdmin):
     list_display = ['title']
